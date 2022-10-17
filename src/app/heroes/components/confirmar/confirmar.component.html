@@ -1,0 +1,11 @@
+
+<h1 mat-dialog-title>Borrar heroe</h1>
+<div mat-dialog-content>
+    ¿Seguro que queire borrar a {{data.superhero}}?
+</div>
+
+<div fxLayout="row" fxLayoutAlign="space-between" mat-dialog-actions>
+    <button mat-raised-button color="warn" (click)="borrar()">Si, borrar</button>
+    
+    <button mat-raised-button color="primary" (click)="cerrar()">No, mantenerlo</button>
+</div>

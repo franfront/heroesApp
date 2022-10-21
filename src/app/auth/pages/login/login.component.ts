@@ -11,15 +11,17 @@ export class LoginComponent {
   constructor(private router: Router, private authService: AuthService) {}
 
   login() {
-    
-    this.authService.login().subscribe(resp=>{
-      console.log(resp)
+    this.authService.login().subscribe((resp) => {
+      console.log(resp);
 
-      if(resp.id){
+      if (resp.id) {
         this.router.navigate(['/heroes']);
       }
-    })
-    
+    });
+  }
 
+  ingresarSinLogin() {
+    this.authService.logout();
+    this.router.navigate(['./heroes']);
   }
 }
